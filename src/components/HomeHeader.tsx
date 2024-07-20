@@ -24,7 +24,7 @@ export function HomeHeader() {
             </VStack>
 
             <TouchableOpacity>
-                <Icon 
+                <Icon  
                     as={MaterialIcons}
                     name="logout"
                     color="gray.200"
