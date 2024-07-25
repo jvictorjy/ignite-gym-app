@@ -6,6 +6,7 @@ import { THEME } from 'src/theme';
 import { Signin } from '@screens/Signin';
 import { Signup } from '@screens/Signup';
 import { Routes } from '@routes/index';
+import { AuthContextProvider } from '@contexts/AuthContext';
 
 export default function App() {
   const [fonstsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -18,7 +19,10 @@ export default function App() {
         translucent
       />
 
-      {fonstsLoaded ? <Routes /> : <Loading />}
+      <AuthContextProvider>
+        {fonstsLoaded ? <Routes /> : <Loading />}
+      </AuthContextProvider>
+      
     </NativeBaseProvider>
   );
 }
