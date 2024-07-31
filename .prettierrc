@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "singleQuote": true,
+  "trailingComma": "all"
+}
